@@ -3,7 +3,9 @@ package application;
 import java.util.Scanner;
 
 public class Menu {
+    // Atributos
     private String opcao;
+    private String opcaoReservas;
 
     private Scanner entradaCaracter = new Scanner(System.in);
 
@@ -27,7 +29,7 @@ public class Menu {
                     opcao = mostrarMenu();
             }
         }
-        System.out.println("Inicio");
+        System.out.println("Sistema Finalizado!!!");
     }
 
     private String mostrarMenu() {
@@ -42,7 +44,7 @@ public class Menu {
         sb.append("\t3. Quartos. \n");
         sb.append("\t4. Sair do Sistema.");
 
-        // Convertendo a classe stringbuilder para string
+        // Convertendo a classe string builder para string
         System.out.println(sb.toString());
 
         return entradaCaracter.nextLine();
@@ -66,6 +68,35 @@ public class Menu {
 
         return entradaCaracter.nextLine();
     }
+
+    private void iniciarMenuReservas() {
+        opcaoReservas = mostrarMenuReservas();
+
+        while(!opcaoReservas.equals("4")){
+            switch (opcaoReservas) {
+                case "1":
+                    System.out.println("Ver reservas");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                case "2":
+                    System.out.println("Adicionar item a reservas");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                case "3":
+                    System.out.println("Remover item da reservas");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                case "4":
+                    System.out.println(" Limpar reservas.");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                default:
+                    System.out.println("Opcao invalida!!!");
+                    opcaoReservas = mostrarMenuReservas();
+            }
+        }
+    }
+
 
     private String mostrarMenuHospedes() {
         StringBuilder sb = new StringBuilder();
