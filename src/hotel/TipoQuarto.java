@@ -9,9 +9,8 @@ public enum TipoQuarto {
     private String tipo;
 
     // Construtor
-    TipoQuarto(String tipo) {
-        this.tipo = tipo;
-    }
+
+    TipoQuarto(String tipo) {}
 
     // Getters e Setters
     public String getTipo() {
