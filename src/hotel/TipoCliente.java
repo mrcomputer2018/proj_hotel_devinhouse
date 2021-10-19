@@ -1,24 +1,22 @@
 package hotel;
 
-public enum TipoQuarto {
+public enum TipoCliente {
+    COMUM("comum"),
+    ESPECIAL("especial");
 
-    LUXO("luxo"),
-    SIMPLES("Simples");
-
-    // Atributo
+    //Atributos
     private String tipo;
 
     // Construtor
-
-    TipoQuarto(String tipo) {}
-
-    // Getters e Setters
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
+    TipoCliente(String tipo) {
         this.tipo = tipo;
     }
 
+    //Getters e Setters
+    public String getTipo() {
+        return tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
