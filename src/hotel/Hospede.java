@@ -6,7 +6,7 @@ public abstract class Hospede {
 
     private String nome;
     private String telefone;
-    private String documento;
+    private TipoDocumento tipoDocumento;
     private LocalDate dataDeNascimento;
     private TipoHospede tipoHospede;
 }
