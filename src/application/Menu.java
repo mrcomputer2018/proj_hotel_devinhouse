@@ -3,7 +3,11 @@ package application;
 import java.util.Scanner;
 
 public class Menu {
+    // Atributos
     private String opcao;
+    private String opcaoReservas;
+    private String opcaoHospedes;
+    private String opcaoQuartos;
 
     private Scanner entradaCaracter = new Scanner(System.in);
 
@@ -23,11 +27,11 @@ public class Menu {
                     opcao = mostrarMenuQuartos();
                     break;
                 default:
-                    System.out.println("Opcao invalida!!!");
+                    // System.out.println("Opcao invalida - menu!!!");
                     opcao = mostrarMenu();
             }
         }
-        System.out.println("Inicio");
+        System.out.println("Sistema Finalizado!!!");
     }
 
     private String mostrarMenu() {
@@ -42,12 +46,13 @@ public class Menu {
         sb.append("\t3. Quartos. \n");
         sb.append("\t4. Sair do Sistema.");
 
-        // Convertendo a classe stringbuilder para string
+        // Convertendo a classe string builder para string
         System.out.println(sb.toString());
 
         return entradaCaracter.nextLine();
     }
 
+    // Reservas
     private String mostrarMenuReservas() {
         StringBuilder sb = new StringBuilder();
 
@@ -61,12 +66,42 @@ public class Menu {
         sb.append("\t4. Limpar reservas. \n");
         sb.append("\t5. Sair de Reservas.");
 
-        // Convertendo a classe stringbuilder para string
+        // Convertendo a classe string builder para string
         System.out.println(sb.toString());
 
         return entradaCaracter.nextLine();
     }
 
+    private void iniciarMenuReservas() {
+        opcaoReservas = mostrarMenuReservas();
+
+        while(!opcaoReservas.equals("5")){
+            switch (opcaoReservas) {
+                case "1":
+                    System.out.println("Ver reservas");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+
+                case "2":
+                    System.out.println("Adicionar item a reservas");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                case "3":
+                    System.out.println("Remover item da reservas");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                case "4":
+                    System.out.println(" Limpar reservas.");
+                    opcaoReservas = mostrarMenuReservas();
+                    break;
+                default:
+                    System.out.println("Opcao invalida - reservas!!!");
+                    opcaoReservas = mostrarMenuReservas();
+            }
+        }
+    }
+
+    // Hospedes
     private String mostrarMenuHospedes() {
         StringBuilder sb = new StringBuilder();
 
@@ -85,6 +120,35 @@ public class Menu {
         return entradaCaracter.nextLine();
     }
 
+    private void iniciarMenuHospedes() {
+        opcaoHospedes = mostrarMenuHospedes();
+
+        while (!opcaoHospedes.equals("5")) {
+            switch (opcaoHospedes) {
+                case "1":
+                    System.out.println("Ver reservas");
+                    opcaoHospedes = mostrarMenuHospedes();
+                    break;
+
+                case "2":
+                    System.out.println("Adicionar item a reservas");
+                    opcaoHospedes = mostrarMenuHospedes();
+                    break;
+                case "3":
+                    System.out.println("Remover item da reservas");
+                    opcaoHospedes = mostrarMenuHospedes();
+                    break;
+                case "4":
+                    System.out.println(" Limpar reservas.");
+                    opcaoHospedes = mostrarMenuHospedes();
+                    break;
+                default:
+                    System.out.println("Opcao invalida - reservas!!!");
+                    opcaoHospedes = mostrarMenuHospedes();
+            }
+        }
+    }
+
     private String mostrarMenuQuartos() {
         StringBuilder sb = new StringBuilder();
 
@@ -101,5 +165,35 @@ public class Menu {
         System.out.println(sb.toString());
 
         return entradaCaracter.nextLine();
+    }
+
+    // Quartos
+    private void iniciarMenuQuartos() {
+        opcaoQuartos = mostrarMenuQuartos();
+
+        while (!opcaoQuartos.equals("5")) {
+            switch (opcaoQuartos) {
+                case "1":
+                    System.out.println("Ver reservas");
+                    opcaoQuartos = mostrarMenuQuartos();
+                    break;
+
+                case "2":
+                    System.out.println("Adicionar item a reservas");
+                    opcaoQuartos = mostrarMenuQuartos();
+                    break;
+                case "3":
+                    System.out.println("Remover item da reservas");
+                    opcaoQuartos = mostrarMenuQuartos();
+                    break;
+                case "4":
+                    System.out.println(" Limpar reservas.");
+                    opcaoQuartos = mostrarMenuQuartos();
+                    break;
+                default:
+                    System.out.println("Opcao invalida - reservas!!!");
+                    opcaoQuartos = mostrarMenuQuartos();
+            }
+        }
     }
 }
