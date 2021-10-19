@@ -9,7 +9,7 @@ public enum TipoQuarto {
     private String descricao;
 
     // Construtor
-    TipoQuarto(String tipo) {}
+    TipoQuarto(String descricao) {}
 
     // Getters e Setters
     public String getDescricao() {
