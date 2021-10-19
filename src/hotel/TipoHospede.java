@@ -1,15 +1,14 @@
 package hotel;
 
-public enum TipoQuarto {
+public enum TipoHospede {
+    ESPECIAL("Especial"),
+    COMUM("Comum");
 
-    LUXO("luxo"),
-    SIMPLES("Simples");
-
-    // Atributo
+   // Atributo
     private String descricao;
 
     // Construtor
-    TipoQuarto(String tipo) {}
+    TipoHospede(String tipo) {}
 
     // Getters e Setters
     public String getDescricao() {
@@ -19,5 +18,4 @@ public enum TipoQuarto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
 }
