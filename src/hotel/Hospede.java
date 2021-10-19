@@ -2,11 +2,11 @@ package hotel;
 
 import java.time.LocalDate;
 
-public class Hospede {
+public abstract class Hospede {
 
-    String nome;
-    String telefone;
-    String documento;
-    LocalDate dataDeNascimento;
-
+    private String nome;
+    private String telefone;
+    private String documento;
+    private LocalDate dataDeNascimento;
+    private TipoHospede tipoHospede;
 }
