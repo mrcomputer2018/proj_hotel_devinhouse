@@ -8,7 +8,9 @@ public enum TipoHospede {
     private String descricao;
 
     // Construtor
-    TipoHospede(String descricao) {}
+    TipoHospede(String descricao) {
+        this.descricao = descricao;
+    }
 
     // Getters e Setters
     public String getDescricao() {

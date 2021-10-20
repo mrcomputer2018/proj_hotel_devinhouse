@@ -6,19 +6,18 @@ public enum TipoQuarto {
     SIMPLES("Simples");
 
     // Atributo
-    private String tipo;
+    private String descricao;
 
     // Construtor
-
-    TipoQuarto(String tipo) {}
+    TipoQuarto(String descricao) {}
 
     // Getters e Setters
-    public String getTipo() {
-        return tipo;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
 }
